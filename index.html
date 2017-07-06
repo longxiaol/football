@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:50px">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <script src="assets/js/module/fontSize.js"></script>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/iconfont/font_x0q7mjzkpf8t1emi/iconfont.css">
+    <link rel="stylesheet" href="assets/css/swiper-3.4.1.min.css">
+    <style>
+       .swiper-pagination{
+            display: -webkit-flex;
+            opacity: 0.7;
+            position: absolute;
+            top:0.88rem;
+            background-color: #fff;
+            width: 100%;
+            z-index: 10;
+            border-bottom: 0.01rem solid #d9d9d9;
+        }
+        .swiper-pagination span{
+            font-size: 0.24rem;
+            flex:1;
+            height: 0.72rem;
+            line-height: 0.72rem;
+            text-align: center;
+            font-weight: 600;
+        }
+    
+        .swiper-pagination-bullet {
+            border-radius:0;
+            opacity:1;
+            background: #d0cbcb;
+        }    
+        .swiper-pagination-bullet-active{
+            background: none;
+            border-bottom: 2px solid #0dc441
+        }
+        .ck::after{
+            content: "";
+            display:table;
+            clear: both;
+            overflow: hidden;
+        }
+    </style>
+    <title>index</title>
+</head>
+<body>
+    <link rel="import" href="assets/template/index_assessment_header.html?__inline">
+                <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    <section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="slide_0">
+                    <div class="scroller">
+                        <div class="content ck"></div>
+                        <div id="upTag_0" style="width:100%;background-color: #f3f3f3;text-align: center; line-height: 40px;margin-bottom:-40px">上拉</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" id="slide_1">
+                  <div class="scroller">
+                    <div class="content ck"></div>
+                    <div id="upTag_1" style="width:100%;background-color: #f3f3f3;text-align: center; line-height: 40px;margin-bottom:-40px">上拉</div>
+                  </div>
+                </div> 
+               <div class="swiper-slide" id="slide_2">
+                  <div class="scroller">
+                    <div class="content ck"></div>
+                    <div id="upTag_2" style="width:100%;background-color: #f3f3f3;text-align: center; line-height: 40px;margin-bottom:-40px">上拉</div>
+                  </div>
+                </div> 
+            </div>
+        </div>
+
+        
+    </section>
+    <link rel="import" href="assets/template/footer.html?__inline">
+</body>
+<script src="assets/js/module/zepto.min.js"></script>
+<script src="assets/js/module/zepto.tap.js"></script>
+<script src="assets/js/module/swiper.jquery.min.js"></script>
+<script src="assets/js/module/artTemplate.js"></script>
+<script src="assets/js/module/iscroll-probe.js"></script>
+<script src="assets/js/module/index-1.js"></script>
+
+<script type="text/html" id="list_temp">
+    {{each List as val index}}
+         <ul>
+             <li><img src="{{val.imgSrc}}" alt=""></li>
+             {{if index%2==0}}
+                <li>{{val.descripition}}性别:{{val.gender | sex}}</li>
+             {{else}}
+                <li style="color:red">{{val.descripition}}性别:{{val.gender | sex}}</li>
+             {{/if}}
+        </ul>
+    {{/each}}
+</script>
+
+</html>

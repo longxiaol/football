@@ -1,0 +1,71 @@
+input{
+    outline: none;
+    border: none;
+}
+/*************section样式******************/
+section{
+    width: 100%;
+}
+/********title样式***********/
+.title{
+    width: 100%;
+    text-align: center;
+    font-size: 0.32rem;
+    background-color: #0dc441;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    color:#fff;
+    font-weight: 600;
+}
+/**********content样式**********/
+.content{
+    width: 5.8rem;
+    font-size: 0.24rem;
+    margin:0 auto;
+}
+/****手机号输入样式*****/
+.phone{
+    height: 0.66rem;
+    line-height: 0.66rem;
+    margin-top: 0.31rem;
+    border-bottom: 0.01rem solid #7f7f7f;
+}
+input{
+    color:#cacaca;
+}
+/***密码输入样式******/
+.pwd{
+    margin-top: 0.55rem;
+    height: 0.66rem;
+    line-height: 0.66rem;
+    border-bottom: 0.01rem solid #7f7f7f;
+}
+/****注册样式*****/
+.register{
+    padding-top: 0.55rem;
+    color:#cacaca;
+    padding-bottom:0.54rem;
+
+}
+.register a{
+    text-decoration: underline;
+    color:#a3e9b7;
+}
+/****提交样式****/
+.submit{
+    width: 100%;
+}
+.submit a{
+    display: block;
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    text-align: center;
+    background-color: #0dc441;
+    text-decoration: none;
+    color:#fff;
+    font-weight: 600;
+    letter-spacing: 0.42rem;
+    font-size: 0.32rem;
+    border-radius: 0.04rem;
+}

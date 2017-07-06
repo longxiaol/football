@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:50px">
+<head>
+    <meta charset="UTF-8">
+    <script src="assets/js/module/fontSize.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/weui.css">
+    <title>login</title>
+    <style>
+        .weui_icon_safe::before{
+           font-size: 70px;
+           margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="title">足球圈—登录</div>
+        <div class="content">
+            <div class="phone"><input type="text" placeholder="手机号" id="phone" value="18608998834"></div>
+            <div class="pwd"><input type="text" placeholder="密码" id="pwd"></div>
+            <div class="register">还没有账号？点击此处立即<a href="javascript:;">注册</a></div>
+            <div class="submit"><a href="javascript:;">提交</a></div>
+        </div>
+        <div id="toast" style="display:none;">
+            <div class="weui_mask_transparent"></div>
+            <div class="weui_toast">
+                <i class="weui_icon_safe weui_icon_safe_warn"></i>
+                <p class="weui_toast_content">已完成</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="assets/js/seajs/sea-debug.js"></script>
+<script>
+    seajs.config({
+       base:'./assets/js/module', //告诉seajs去哪里找我的模块
+       alias:{
+         "zepto" : "zepto.min.js",
+         "tap": "zepto.tap.js",
+         "common": "common.js"
+       }
+    })
+
+    seajs.use('login',function(){
+
+    })
+</script>
+</html>
